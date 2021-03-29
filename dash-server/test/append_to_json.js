@@ -10,12 +10,12 @@ const first_element = data[0]
 var title = first_element['name'];
 
 var newFetchData = [
-    {name:"long",value:"Boo"},
-    {name:"keu",value:"Boo"},
-    {name:"mid",value:"Key"},
-    {name:"short",value:"Booi"},
-    {name:"deepak",value:"Nothing"},
-    {name:"lucas",value:"something"}
+    {name:"long",value:"Boo",date:"2021-03-29T16:09:52.595Z"},
+    {name:"keu",value:"Boo",date:"2021-03-29T16:09:52.595Z"},
+    {name:"mid",value:"Key",date:"2021-03-29T16:09:52.595Z"},
+    {name:"short",value:"Booi",date:"2021-03-29T16:09:52.595Z"},
+    {name:"deepak",value:"Nothing",date:"2021-03-29T16:09:52.595Z"},
+    {name:"lucas",value:"something",date:"2021-03-29T16:09:52.595Z"}
 ]
 
 // newFetchData = newFetchData.reverse()
@@ -33,22 +33,6 @@ for (i; i < newFetchData.length; i++ ){
 
 
 
-// console.log(i)
-// console.log(newFetchData.splice(i))
-// console.log(newData);
-
-// console.log(newData);
-// console.log(data);
 const final_data = newData.concat(data)
 console.log(final_data);
 
-
-
-// get the last element of the data
-// console.log(data[data.length - 1])
-
-// var fruits = ["banana","mango","orange"]
-// var n = fruits.includes("mango");
-// console.log(n);
-
-var h = newFetchData.includes(first_element)
