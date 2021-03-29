@@ -1,0 +1,27 @@
+{
+  "name": "dash-fx",
+  "version": "1.0.0",
+  "description": "get all the vfx artciles and software updates",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakxyz/dash-fx.git"
+  },
+  "author": "Deepak Rajan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deepakxyz/dash-fx/issues"
+  },
+  "homepage": "https://github.com/deepakxyz/dash-fx#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "request": "^2.88.2"
+  }
+}
