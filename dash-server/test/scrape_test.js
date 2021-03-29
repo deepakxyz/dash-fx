@@ -18,12 +18,12 @@ const artofvfx = () =>{
 
             // const articles = $('.td-block-span4').html();
             // empty article array
-            const articles = {};
+            const articles = [];
             $('.td-block-span4').each((index, element)=> {
                 const title = $(element).children().find('h3.entry-title').text();
                 const url = $(element).find('h3.entry-title').find('a').attr("href");
                 const imgUrl = $(element).find('img.entry-thumb').attr('data-img-url');
-                let subTitle = $(element).find('div.td-excerpt').text();
+                var subTitle = $(element).find('div.td-excerpt').text();
                 // remove all the special characters
                 subTitle = subTitle.replace(/(\r\n|\n|\r)/gm, "");
                 // push it into the articles array
