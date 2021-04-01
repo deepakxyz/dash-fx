@@ -6,7 +6,7 @@ const fs = require('fs');
 const get_sub_push = (fetchData,  filename,firstElementName,url) => {
     var existing_data = fs.readFileSync(filename);
     existing_data = JSON.parse(existing_data);
-    cost = first_element = existing_data[0];
+    const first_element = existing_data[0];
     var title = first_element[firstElementName];
 
     // subract the data
@@ -19,7 +19,7 @@ const get_sub_push = (fetchData,  filename,firstElementName,url) => {
         }else{
             newData[i]=fetchData[i];
         }
-    }
+    } 
 
     // update info
     if (newData.length > 0){
@@ -36,7 +36,7 @@ const get_sub_push = (fetchData,  filename,firstElementName,url) => {
 
 
 const artofvfx = () => {
-    site_url = "https://www.artofvfx.com/category/interviews/"
+    site_url = "https://www.artofvfx.com/category/interviews/" 
     axios.get(site_url)
         .then((res)=>{
             // load website data
@@ -46,15 +46,15 @@ const artofvfx = () => {
             const fetched_data = [];
 
             // get the top two data
+            // const topTwoLink = []
             // $('.td_module_mx5').each((index,element)=>{
             //     // get the url of the article
             //     var title = $(element).find('div.td-meta-info-container').find('a').text();
             //     var url = $(element).find('div.td-meta-info-container').find('a').attr('href');
             //     var imgUrl = $(element).find('div.td-module-thumb').children().children().attr('data-img-url');
-
-            //     console.log(imgUrl);
+            //     topTwoLink[index] = url;
             // })
-
+         
 
             // get the required data and push it into an array
             $('.td-block-span4').each((index, element)=> {
@@ -83,7 +83,6 @@ const artofvfx = () => {
         .catch(err=>console.error(err.message));
 }
 
-artofvfx()
 
 // beforeandafter
 const beforeandafter = () => {
@@ -121,6 +120,7 @@ const beforeandafter = () => {
             get_sub_push(fetched_data,"beforeandafter.json","title",site_url);
     })
 }
+
 
 
 // fxguide
@@ -205,4 +205,7 @@ const foundryinsights = () => {
         .catch(err=>console.error(err.message));
 }
 
-// foundryinsights()
+artofvfx()
+beforeandafter()
+fxguide()
+foundryinsights()
